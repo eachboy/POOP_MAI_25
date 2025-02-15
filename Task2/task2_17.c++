@@ -25,20 +25,24 @@ int main() {
         std::cout << "\n";
     }
 
+    bool isSim = true;
     for (int i = 0; i < n; ++i) {
         for (int j = 0; j < n; ++j) {
-            if (i != j && i + j != n - 1) {
-                matr[i][j] = 1;
+            if (matr[i][j] != matr[j][i]) {
+                isSim = false;
+                break;
             }
+        }
+        if (!isSim) {
+            break;
         }
     }
 
-    printf("\nFinal matrix:\n");
-    for (int i = 0; i < n; ++i) {
-        for (int j = 0; j < n; ++j) {
-            std::cout << matr[i][j] << "\t";
-        }    
-        std::cout << "\n";
+    printf("Result is: ");
+
+    if (isSim) {
+        std::cout << "Matrix is good." << std::endl;
+    } else {
+        std::cout << "Matrix is bad." << std::endl;
     }
-    return 0;
 }

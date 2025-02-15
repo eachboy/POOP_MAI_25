@@ -25,20 +25,21 @@ int main() {
         std::cout << "\n";
     }
 
-    for (int i = 0; i < n; ++i) {
-        for (int j = 0; j < n; ++j) {
-            if (i != j && i + j != n - 1) {
-                matr[i][j] = 1;
-            }
-        }
-    }
+    int num;
+    std::cout << "Enter line (1 - " << n << "): ";
+    std::cin >> num;
 
-    printf("\nFinal matrix:\n");
+    printf("\nAnswer is:\n");
     for (int i = 0; i < n; ++i) {
         for (int j = 0; j < n; ++j) {
-            std::cout << matr[i][j] << "\t";
+            if (num-1 == j) {
+                matr[i][j] = 0;
+                std::cout << matr[i][j] << "\t";
+            } else {
+                std::cout << matr[i][j] << "\t";
+            }
         }    
         std::cout << "\n";
     }
-    return 0;
+
 }
