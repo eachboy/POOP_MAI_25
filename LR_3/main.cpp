@@ -57,7 +57,7 @@ int PrintInfo()
     cout << "1. Generate array (uniform distribution)\n";
     cout << "2. Generate array (normal distribution)\n";
     cout << "3. Generate container (uniform: a=0, b=n*1000)\n";
-    cout << "4. Generate container (normal: u=N*1000/2, o=N*500/2)\n";
+    cout << "4. Generate container (normal: u=N*100/2, o=N*50/2)\n";
     cout << "5. Calculate mean and standard deviation\n";
     cout << "6. Estimate distribution parameters\n";
     cout << "7. Create histogram\n";
