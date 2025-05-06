@@ -141,7 +141,6 @@ void estimateParameters(double* array, int size)
 
 void createHistogram(double* array, int size) 
 {
-    // Находим минимальное и максимальное значения
     double min_val = array[0];
     double max_val = array[0];
     for(int i = 1; i < size; i++) {
